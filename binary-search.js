@@ -8,10 +8,6 @@ function binarySearch(array, searchTerm) {
 	 ** keep repeating with smaller and smaller subsets until you find the searchTerm
 	 */
 
-	 let x = 0;
-
-	 
-
 	return null;
 }
 
