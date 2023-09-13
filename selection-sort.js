@@ -7,6 +7,8 @@ function selectionSort(array) {
 	 ** Continue like this until you have only one element left.
 	 */
 
+	let y;
+
 	return array;
 }
 
