@@ -8,7 +8,16 @@ function binarySearch(array, searchTerm) {
 	 ** keep repeating with smaller and smaller subsets until you find the searchTerm
 	 */
 	
-	 
+	let startPos = 0;
+	let endPos = array.length;
+	let mid = Math.floor(startPos + endPos / 2);
+
+	while(mid !== searchTerm) {
+		if(mid > searchTerm) {
+			endPos = mid;
+			mid = Math.floor(startPos + endPos / 2);
+		}
+	}
 
 	return null;
 }
