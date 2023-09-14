@@ -7,7 +7,24 @@ function selectionSort(array) {
 	 ** Continue like this until you have only one element left.
 	 */
 
-	let y;
+	let x = array[0];
+	let y = 0;
+	let z
+
+	while(y < array.length) {
+		for(let i = y; i < array.length; i++) {
+			if(x > array[i]) {
+				x = array[i];
+				z = i;
+			}
+		}
+		if(array[z] == x) {
+			array[z] = array[y];
+			array[y] = x;
+		}
+		y++;
+		x = array[y];
+	}
 
 	return array;
 }
