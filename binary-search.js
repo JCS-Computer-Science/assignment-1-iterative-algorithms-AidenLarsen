@@ -9,16 +9,16 @@ function binarySearch(array, searchTerm) {
 	 */
 	
 	let y = 0;
-	let x = array.length;
-	let z = Math.floor(y + x / 2);
+	let x = array.length-1;
+	let z = Math.floor((y + x) / 2);
 
-	while(z !== searchTerm) {
-		if(z > searchTerm) {
-			x = z;
-			z = Math.floor(y + x / 2);
-		} else if(z < searchTerm) {
-			y = z;
-			z = Math.floor(y + x / 2);
+	while(array[z] !== searchTerm) {
+		if(array[z] > searchTerm) {
+			x = z-1;
+			z = Math.floor((y + x) / 2);
+		} else if(array[z] < searchTerm) {
+			y = z+1;
+			z = Math.floor((x + y) / 2);
 		}
 	}
 
